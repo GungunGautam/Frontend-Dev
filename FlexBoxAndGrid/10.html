@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Webpage</title>
+<style>
+body { margin: 0; font-family: Arial; }
+header {
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+}
+nav a { color: white; text-decoration: none; margin: 0 10px; }
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://via.placeholder.com/1200x400') center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h1 { animation: fadeUp 1.5s ease; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+.article {
+  display: flex;
+  gap: 20px;
+}
+.article .box {
+  background: #f2f2f2;
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+}
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+@media (max-width: 700px) {
+  .main { grid-template-columns: 1fr; }
+  .article { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h2>My Website</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+<section class="hero">
+  <h1>Welcome to My Website</h1>
+  <p>Simple, Clean, and Responsive Design</p>
+</section>
+<section class="main">
+  <div>
+    <div class="article">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+  </div>
+  <aside style="background:#eee; padding:20px; border-radius:10px;">Sidebar content here...</aside>
+</section>
+<footer>&copy; 2025 My Website</footer>
+</body>
+</html>

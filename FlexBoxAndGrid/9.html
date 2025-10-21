@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Flip</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e8e8e8;
+}
+.card {
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+}
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card:hover .inner {
+  transform: rotateY(180deg);
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.front {
+  background: #fff;
+}
+.front img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+.back {
+  background: #333;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="inner">
+    <div class="front">
+      <img src="https://via.placeholder.com/250x200" alt="">
+      <h3>Front Side</h3>
+    </div>
+    <div class="back">
+      <p>This is the back description of the card with more info.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

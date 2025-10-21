@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+}
+header, footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+}
+main img {
+  width: 250px;
+  border-radius: 10px;
+}
+footer {
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  main, header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <h2>My Portfolio</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+  </nav>
+</header>
+<main>
+  <section>
+    <h3>About Me</h3>
+    <p>I’m a creative web developer passionate about building clean, responsive designs.</p>
+  </section>
+  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Profile">
+</main>
+<footer>&copy; 2025 My Portfolio</footer>
+</body>
+</html>

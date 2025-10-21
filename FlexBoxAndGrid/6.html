@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Layout</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f8f8f8;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+header {
+  grid-area: header;
+  background: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.sidebar {
+  grid-area: sidebar;
+  background: #ddd;
+  padding: 15px;
+}
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.post {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+footer {
+  grid-area: footer;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+@media (max-width: 800px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+  main { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header><h2>My Blog</h2></header>
+  <div class="sidebar">
+    <h3>Categories</h3>
+    <ul>
+      <li>Tech</li>
+      <li>Design</li>
+      <li>Lifestyle</li>
+    </ul>
+  </div>
+  <main>
+    <div class="post"><h3>Post 1</h3><p>Sample content...</p></div>
+    <div class="post"><h3>Post 2</h3><p>Sample content...</p></div>
+  </main>
+  <footer>&copy; 2025 My Blog</footer>
+</div>
+</body>
+</html>
