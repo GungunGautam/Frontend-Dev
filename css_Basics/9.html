@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Magazine Columns</title>
+<style>
+  :root{ --page-bg:#efeef6; --content-bg:#fff; --pad:28px; }
+  html,body{margin:0;padding:0;height:100%;font-family: Georgia, "Times New Roman", serif;background:var(--page-bg); color:#111;}
+  .page{
+    max-width:1100px;
+    margin:32px auto;
+    background:var(--content-bg);
+    padding:var(--pad);
+    box-shadow: 0 12px 36px rgba(10,10,20,0.06);
+  }
+
+  h1{font-family: "Playfair Display", Georgia, serif; font-size:32px; margin:0 0 14px 0; text-align:center;}
+  .lead{font-size:14px;color:#5a5a5a;margin-bottom:18px; text-align:center;}
+
+  .article{
+    column-count:3;
+    column-gap:32px;
+    font-size:16px;
+    line-height:1.7;
+    text-align:justify;
+  }
+
+  /* heading that spans all columns */
+  .article h2{
+    column-span: all; /* modern browsers */
+    font-family: "Playfair Display", Georgia, serif;
+    margin:6px 0 14px 0;
+    font-size:22px;
+  }
+
+  /* float image aligned left inside column flow */
+  .thumb{
+    float:left;
+    margin:0 14px 12px 0;
+    width:180px;
+    border-radius:8px;
+    box-shadow: 0 8px 20px rgba(16,24,40,0.08);
+  }
+
+  /* custom font styles */
+  .article p{ font-family: Georgia, "Times New Roman", serif; color:#222; margin:0 0 14px 0; }
+
+  @media (max-width:900px){
+    .article{ column-count:2; }
+  }
+  @media (max-width:560px){
+    .article{ column-count:1; }
+    .thumb{ width:40%; margin-right:12px; }
+  }
+
+  /* page padding */
+  body{ padding:18px; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <h1>Daily Review</h1>
+    <p class="lead">A short magazine-style layout demonstrating multi-column flow and image float.</p>
+
+    <article class="article" aria-labelledby="artTitle">
+      <h2 id="artTitle">The Quiet Charm of Early Mornings</h2>
+
+      <img class="thumb" src="https://picsum.photos/id/1003/600/400" alt="Morning scene" />
+
+      <p>
+        Morning arrives with a quiet hush, a gentle slow recalibration of the senses. Streets that the previous night
+        filled with neon and noise settle into a softer rhythm. Shop doors lift, the smell of fresh bread travels on the
+        breeze, and an old radio plays a wistful tune in the corner — sometimes a golden-era Bollywood melody that
+        lingers like a memory.
+      </p>
+
+      <p>
+        The light itself seems different at this hour: thinner, more patient. Shadows stretch longer and the sky holds more
+        subtle colors than at any other time of day. Commuters appear in small numbers, nodding hello, keeping their
+        own secret routines as they move. Coffee stalls become tiny islands of human exchange, where the city breathes
+        and the world begins again.
+      </p>
+
+      <p>
+        For readers who relish silence and detail, mornings provide a catalogue of small delights. An old bicycle chained
+        under a lamppost, a newspaper folded at the corner, the rhythm of a vendor's call — these details knit together
+        to form the city's understated tapestry. As the sun climbs, the tempo quickens and the city reveals itself in a
+        new register.
+      </p>
+
+      <p>
+        The practice of noticing is not merely aesthetic; it is restorative. Taking even a moment to observe the way light
+        refracts on a pane of water or the pattern of rust on a gate can be an act of gratitude. These moments accumulate,
+        and over time they create an interior architecture: a quieter, sturdier self who knows how to be present.
+      </p>
+    </article>
+  </div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Paris</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            border-bottom: 5px solid #5a67d8;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: #2d3748;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fbbf24;
+        }
+
+        main {
+            width: 100%;
+        }
+
+        section {
+            padding: 5rem 10%;
+            border-bottom: 3px solid #e2e8f0;
+        }
+
+        /* Section 1 - Linear Gradient Background */
+        #history {
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        /* Section 2 - Parallax Effect */
+        #attractions {
+            background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&h=800&fit=crop');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            position: relative;
+        }
+
+        #attractions::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        #attractions .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Section 3 - Radial Gradient */
+        #culture {
+            background: radial-gradient(circle at center, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        /* Section 4 - Another Parallax */
+        #cuisine {
+            background-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1200&h=800&fit=crop');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            position: relative;
+        }
+
+        #cuisine::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        #cuisine .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            padding: 0 2rem;
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+            padding-left: 2rem;
+        }
+
+        #history p {
+            border-left-color: #fc8181;
+        }
+
+        #culture p {
+            border-left-color: #fbbf24;
+        }
+
+        footer {
+            background-color: #1a202c;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Discover Paris</h1>
+        <p>The City of Light and Love</p>
+    </header>
+
+    <nav>
+        <a href="#history">History</a>
+        <a href="#attractions">Attractions</a>
+        <a href="#culture">Culture</a>
+        <a href="#cuisine">Cuisine</a>
+    </nav>
+
+    <main>
+        <section id="history">
+            <h2>Rich History</h2>
+            <p>
+                Paris has been a major European city for over 2,000 years, with its origins dating back to the 
+                3rd century BC when it was a settlement of the Parisii tribe. Throughout centuries, it has been 
+                the capital of powerful kingdoms and empires, shaping world history through art, culture, and politics.
+            </p>
+            <p>
+                From the medieval Notre-Dame Cathedral to the revolutionary storming of the Bastille, Paris has 
+                witnessed and influenced countless historic moments that changed the course of civilization.
+            </p>
+        </section>
+
+        <section id="attractions">
+            <div class="content">
+                <h2>Must-See Attractions</h2>
+                <h3>Eiffel Tower</h3>
+                <p>
+                    The iconic iron lattice tower stands 330 meters tall and offers breathtaking views of the entire city. 
+                    Built in 1889, it has become the global symbol of France.
+                </p>
+                <h3>Louvre Museum</h3>
+                <p>
+                    Home to thousands of works of art, including the Mona Lisa and Venus de Milo, the Louvre is 
+                    the world's largest art museum and a historic monument in Paris.
+                </p>
+            </div>
+        </section>
+
+        <section id="culture">
+            <h2>Vibrant Culture</h2>
+            <p>
+                Paris is renowned as a global center for art, fashion, gastronomy, and culture. The city has been 
+                home to countless artists, writers, and thinkers who have shaped modern culture. From impressionist 
+                masterpieces to haute couture fashion shows, Paris continues to set trends worldwide.
+            </p>
+            <p>
+                The café culture, street performances, and world-class theaters create an atmosphere of creativity 
+                and sophistication that captivates millions of visitors each year.
+            </p>
+        </section>
+
+        <section id="cuisine">
+            <div class="content">
+                <h2>Exquisite Cuisine</h2>
+                <p>
+                    French cuisine is celebrated worldwide, and Paris offers the finest gastronomic experiences. 
+                    From buttery croissants and delicate macarons to coq au vin and bouillabaisse, every dish 
+                    is a work of art.
+                </p>
+                <p>
+                    The city boasts numerous Michelin-starred restaurants, charming bistros, and bustling markets 
+                    where you can savor authentic French flavors and culinary traditions passed down through generations.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Discover Paris. Experience the magic of the City of Light.</p>
+    </footer>
+</body>
+</html>

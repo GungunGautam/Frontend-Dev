@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CSS Photo Gallery</title>
+<style>
+  :root{
+    --gap: 16px;
+    --bg: #f4f6f8;
+    --card-shadow: 0 8px 20px rgba(16,24,40,0.08);
+    --accent: rgba(0,0,0,0.6);
+  }
+  html,body{height:100%;margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+  .container{max-width:1200px;margin:32px auto;padding:0 16px;}
+  h1{font-size:20px;margin:8px 0 20px 0;text-align:center;}
+
+  /* Responsive grid gallery */
+  .gallery{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+  }
+
+  /* adjust columns at breakpoints */
+  @media (max-width:1000px){ .gallery{grid-template-columns: repeat(3,1fr);} }
+  @media (max-width:700px){  .gallery{grid-template-columns: repeat(2,1fr);} }
+  @media (max-width:420px){  .gallery{grid-template-columns: 1fr;} }
+
+  .item{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow: var(--card-shadow);
+    background:#fff;
+    min-height:160px;
+  }
+
+  .item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition: transform 300ms ease;
+    transform-origin:center center;
+  }
+
+  .caption{
+    position:absolute;
+    left:0;right:0;bottom:0;
+    padding:12px 14px;
+    background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 100%);
+    color:#fff;
+    font-weight:600;
+    opacity:0;
+    transform: translateY(8px);
+    transition: opacity 220ms ease, transform 220ms ease;
+    pointer-events:none;
+  }
+
+  /* hover effects */
+  .item:hover img{ transform: scale(1.1); }
+  .item:hover .caption{ opacity:1; transform: translateY(0); pointer-events:auto; }
+
+  /* small caption subtle text */
+  .caption small{ display:block; font-weight:400; font-size:12px; opacity:0.85; margin-top:6px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Responsive CSS Photo Gallery</h1>
+    <div class="gallery">
+      <div class="item">
+        <img src="https://picsum.photos/id/1015/800/600" alt="Image 1" />
+        <div class="caption">Mountain view <small>Landscape • 2025</small></div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/id/1025/800/600" alt="Image 2" />
+        <div class="caption">Coastal line <small>Seaside • 2024</small></div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/id/1035/800/600" alt="Image 3" />
+        <div class="caption">City lights <small>Urban • Night</small></div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/id/1045/800/600" alt="Image 4" />
+        <div class="caption">Forest trail <small>Nature • Calm</small></div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/id/1055/800/600" alt="Image 5" />
+        <div class="caption">Desert dunes <small>Golden hour</small></div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/id/1065/800/600" alt="Image 6" />
+        <div class="caption">Serene lake <small>Reflection</small></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 3rem 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-container {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .team-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            flex: 1;
+            max-width: 350px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Highlight Team Lead Card */
+        .team-card.lead {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border: 3px solid #f59e0b;
+            border-style: double;
+        }
+
+        .card-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            object-fit: cover;
+            border: 4px solid #667eea;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-card.lead .card-image {
+            border-color: #f59e0b;
+        }
+
+        .card-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2d3748;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-role {
+            font-size: 1.1rem;
+            color: #667eea;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .team-card.lead .card-role {
+            color: #f59e0b;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-card {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meet Our Team</h1>
+        
+        <div class="team-container">
+            <!-- Team Member 1 -->
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" alt="Sarah Johnson" class="card-image">
+                <h2 class="card-name">Sarah Johnson</h2>
+                <p class="card-role">UX Designer</p>
+                <p class="card-description">
+                    Sarah brings 7 years of experience in user-centered design. She specializes in creating 
+                    intuitive interfaces that delight users and drive business results. Her passion for 
+                    accessibility ensures every design is inclusive.
+                </p>
+            </div>
+
+            <!-- Team Lead - Highlighted -->
+            <div class="team-card lead">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop" alt="Michael Chen" class="card-image">
+                <h2 class="card-name">Michael Chen</h2>
+                <p class="card-role">Team Lead</p>
+                <p class="card-description">
+                    As our Team Lead, Michael guides the team with his 10+ years of experience in software 
+                    development. His strategic vision and mentorship have been instrumental in delivering 
+                    award-winning projects and fostering team growth.
+                </p>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop" alt="Emily Rodriguez" class="card-image">
+                <h2 class="card-name">Emily Rodriguez</h2>
+                <p class="card-role">Frontend Developer</p>
+                <p class="card-description">
+                    Emily is a skilled frontend developer who transforms designs into pixel-perfect, 
+                    responsive websites. With expertise in React and modern CSS, she builds fast and 
+                    beautiful web experiences that users love.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

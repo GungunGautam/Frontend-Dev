@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Complete Layout Demo</title>
+<style>
+  :root{
+    --accent: #0b5cff;
+    --muted: #475569;
+    --bg: linear-gradient(180deg, rgba(11,92,255,0.06), rgba(11,92,255,0.02));
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:#0b1724;line-height:1.6;}
+
+  /* Sticky header with nav (uses position:sticky) */
+  header{
+    position:sticky;
+    top:0;
+    background:rgba(255,255,255,0.96);
+    border-bottom: 1px solid rgba(10,20,40,0.06);
+    padding:12px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index:50;
+    box-shadow: 0 6px 18px rgba(16,24,40,0.04);
+  }
+  nav a{ margin-left:14px; text-decoration:none;color:var(--muted); font-weight:600;}
+  nav a:hover{color:var(--accent);}
+
+  /* Hero section with large background image and centered text (use relative + absolute) */
+  .hero{
+    position:relative;
+    height:60vh;
+    min-height:360px;
+    background-image: linear-gradient(rgba(2,6,23,0.35), rgba(2,6,23,0.15)), url('https://picsum.photos/id/1018/1600/900');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+  }
+  .hero .content{
+    position:relative; /* relative used */
+    z-index:2;
+    padding:20px;
+    border-radius:10px;
+  }
+  .hero h1{font-size:36px;margin:0 0 8px 0; text-shadow: 0 6px 24px rgba(0,0,0,0.45);}
+  .hero p{margin:0;font-size:16px; opacity:0.92;}
+
+  /* About section - two columns (text + image) using grid */
+  .container{max-width:1100px;margin:28px auto;padding:0 18px;}
+  .about{
+    display:grid;
+    grid-template-columns: 1fr 440px;
+    gap:28px;
+    align-items:center;
+    margin-bottom:28px;
+  }
+  .about img{
+    width:100%;
+    border-radius:12px;
+    box-shadow: 0 12px 36px rgba(16,24,40,0.08);
+  }
+
+  /* Services - three boxes in a row using flex */
+  .services{
+    display:flex;
+    gap:18px;
+    margin-bottom:28px;
+  }
+  .service{
+    flex:1;
+    background:#fff;
+    padding:18px;
+    border: 1px solid rgba(10,20,40,0.04);
+    border-radius:12px;
+    box-shadow: 0 12px 36px rgba(16,24,40,0.06);
+    min-height:120px;
+  }
+
+  /* Contact section form */
+  .contact{
+    background: linear-gradient(180deg, rgba(11,92,255,0.04), rgba(11,92,255,0.01));
+    padding:18px;
+    border-radius:12px;
+    margin-bottom:40px;
+  }
+  .contact form{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+  .contact form .full{ grid-column:1/-1; }
+
+  input, textarea{
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid rgba(10,20,40,0.06);
+    outline:none;
+    font-size:14px;
+  }
+  input:focus, textarea:focus{
+    border-color: rgba(11,92,255,0.8);
+    box-shadow: 0 8px 24px rgba(11,92,255,0.08);
+  }
+
+  /* Footer fixed at bottom of document flow (not fixed position) */
+  footer{
+    padding:18px;
+    text-align:center;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  /* use margin, padding, border, outline examples above
+     and relative/absolute/fixed: header sticky, hero relative,
+     decorative badge absolute
+  */
+  .badge{
+    position:absolute;
+    right:24px;
+    bottom:24px;
+    background: rgba(255,255,255,0.9);
+    padding:8px 12px;
+    border-radius:20px;
+    border:1px solid rgba(10,20,40,0.06);
+    font-weight:700;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width:1000px){
+    .about{ grid-template-columns:1fr; }
+    .services{ flex-direction:column; }
+    .contact form{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div style="font-weight:800;color:var(--accent)">MySite</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" role="banner">
+    <div class="content">
+      <h1>Welcome to Our Demo</h1>
+      <p>Clean layout demonstrating box model, positioning and responsive alignment.</p>
+    </div>
+    <div class="badge">Since 2025</div>
+  </section>
+
+  <main class="container">
+    <section id="about" class="about" aria-label="About">
+      <div>
+        <h2>About Us</h2>
+        <p>
+          We build clean, accessible layouts using only HTML and CSS. This section demonstrates two-column
+          composition where one column is text and the other is an image. Margins, padding, borders and outlines
+          have all been used intentionally to show spacing and separation.
+        </p>
+        <p>
+          Tip: use relative positioning to anchor absolutely positioned elements inside a container (see the hero badge).
+        </p>
+      </div>
+      <div>
+        <img src="https://picsum.photos/id/1027/800/600" alt="About image" />
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 style="margin-bottom:12px">Services</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Design</h3>
+          <p>Thoughtful UI & UX design using proven layout principles.</p>
+        </div>
+        <div class="service">
+          <h3>Development</h3>
+          <p>Responsive, accessible front-end implemented with modern CSS.</p>
+        </div>
+        <div class="service">
+          <h3>Support</h3>
+          <p>Long-term support and iterative improvements.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 style="margin-top:0">Contact</h2>
+      <form action="#" method="post" novalidate>
+        <input type="text" name="name" placeholder="Name" />
+        <input type="email" name="email" placeholder="Email" />
+        <input class="full" type="text" name="subject" placeholder="Subject" />
+        <textarea class="full" name="message" placeholder="Message" rows="6"></textarea>
+        <div class="full" style="text-align:right;">
+          <button type="submit" style="padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:#fff;font-weight:700;">Send</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 — Demo Layout. All rights reserved.
+  </footer>
+
+</body>
+</html>

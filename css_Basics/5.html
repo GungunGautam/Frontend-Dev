@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Table</title>
+<style>
+  :root {
+    --accent: #0b5cff;
+    --popular: #ffd700;
+    --bg: #f5f7fa;
+    --card-bg: #ffffff;
+    --shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: #111;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--accent);
+  }
+
+  .pricing-table {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* ensures equal height */
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px;
+  }
+
+  .plan {
+    background: var(--card-bg);
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    flex: 1 1 300px;
+    max-width: 320px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plan:hover {
+    transform: scale(1.05);
+    background-color: #eef3ff;
+  }
+
+  .plan h2 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+
+  .features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    flex: 1; /* helps equal height alignment */
+  }
+
+  .features li {
+    margin: 10px 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    padding-bottom: 6px;
+  }
+
+  .price {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: var(--accent);
+  }
+
+  .plan a {
+    text-decoration: none;
+    background: var(--accent);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background 0.3s ease;
+  }
+
+  .plan a:hover {
+    background: #073db8;
+  }
+
+  /* Highlight the Standard plan as most popular */
+  .popular {
+    border: 3px solid var(--popular);
+    position: relative;
+  }
+
+  .popular::before {
+    content: "Most Popular";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--popular);
+    color: #111;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  @media (max-width: 900px) {
+    .pricing-table {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Our Pricing Plans</h1>
+
+<div class="pricing-table">
+  <!-- Basic Plan -->
+  <div class="plan">
+    <h2>Basic</h2>
+    <ul class="features">
+      <li>✔ 5 GB Storage</li>
+      <li>✔ Basic Support</li>
+      <li>✔ Single User</li>
+      <li>✖ No Analytics</li>
+    </ul>
+    <div class="price">$9/month</div>
+    <a href="#">Choose Plan</a>
+  </div>
+
+  <!-- Standard (Most Popular) -->
+  <div class="plan popular">
+    <h2>Standard</h2>
+    <ul class="features">
+      <li>✔ 50 GB Storage</li>
+      <li>✔ Priority Support</li>
+      <li>✔ Up to 5 Users</li>
+      <li>✔ Basic Analytics</li>
+    </ul>
+    <div class="price">$29/month</div>
+    <a href="#">Choose Plan</a>
+  </div>
+
+  <!-- Premium Plan -->
+  <div class="plan">
+    <h2>Premium</h2>
+    <ul class="features">
+      <li>✔ 200 GB Storage</li>
+      <li>✔ 24/7 Support</li>
+      <li>✔ Unlimited Users</li>
+      <li>✔ Advanced Analytics</li>
+    </ul>
+    <div class="price">$59/month</div>
+    <a href="#">Choose Plan</a>
+  </div>
+</div>
+
+</body>
+</html>
