@@ -1,0 +1,73 @@
+/* Grid gallery with different filters and hover removal */
+:root {
+  --gap: 1rem;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #111;
+}
+
+header { text-align: center; margin-bottom: 1rem; }
+.lead { margin-top: .25rem; color: #555; }
+
+.gallery {
+  width: 100%;
+  max-width: var(--max-width);
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Figure styles */
+.item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform .25s ease;
+}
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: filter .4s ease, transform .3s ease;
+}
+
+/* captions */
+.item figcaption {
+  padding: 0.6rem;
+  font-size: .95rem;
+  color: #222;
+}
+
+/* different filters */
+.item.blur img { filter: blur(3px); }
+.item.grayscale img { filter: grayscale(100%); }
+.item.sepia img { filter: sepia(80%); }
+.item.brightness img { filter: brightness(0.6); }
+.item.contrast img { filter: contrast(60%); }
+.item.hue img { filter: hue-rotate(200deg) saturate(1.2); }
+
+/* On hover — remove filter smoothly */
+.item:hover img {
+  filter: none;
+  transform: scale(1.02);
+}
+
+/* Stack into one column under 600px */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .item img { height: 300px; }
+}

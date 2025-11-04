@@ -1,0 +1,11 @@
+/* Responsive-Design-Principles.css */
+body{margin:0;font-family:system-ui, sans-serif;background:#fafbff;padding:2rem}
+.principles{ display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; max-width:1100px; margin:0 auto; }
+.box{ background:#fff;padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.04); transition:background .2s, color .2s }
+.box:hover{ background: linear-gradient(135deg,#e8f0ff,#fff); color:#0b2a66 }
+
+/* small screens -> single column */
+@media (max-width:600px){
+  .principles{ grid-template-columns: 1fr; }
+}
+pre{ background:#f6f7fb;padding:.5rem;border-radius:6px;overflow:auto;font-size:.85rem }

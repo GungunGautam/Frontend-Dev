@@ -1,0 +1,32 @@
+/* Responsive-CSS-Cheat-Sheet.css */
+body{margin:0;font-family:system-ui, sans-serif;background:#f5f7fb;padding:2rem}
+.cheats{max-width:1100px;margin:0 auto}
+header h1{text-align:center;margin-bottom:1rem}
+
+.grid{
+  display:grid;
+  gap:1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* box styles */
+.box{
+  background:#fff;
+  padding:1rem;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.04);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.box:hover{
+  transform: translateY(-6px);
+  box-shadow:0 10px 28px rgba(0,0,0,0.08);
+}
+
+/* Large screens: 3 columns; medium: 2; small: stacked */
+@media (max-width:1000px){
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width:700px){
+  .grid { grid-template-columns: 1fr; }
+  /* on small screens each heading then value is inherently stacked already */
+}

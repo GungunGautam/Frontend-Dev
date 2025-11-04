@@ -1,0 +1,40 @@
+html,body{height:100%}
+body{
+  margin:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:system-ui, sans-serif;
+  padding:2rem;
+  background:#fbfbfe;
+}
+
+.typography-demo{
+  max-width:800px;
+  text-align:center;
+  padding:2rem;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+h1{
+  margin:0 0 1rem 0;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height:1.05;
+}
+
+p{
+  margin:0;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height:1.6;
+  color:#333;
+  max-width:50ch;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Below 700px adjust spacing for readability */
+@media (max-width:700px){
+  .typography-demo { padding:1rem; }
+  p { line-height:1.5; }
+}

@@ -1,0 +1,61 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #f7f7f9;
+  border-bottom: 1px solid #e6e6e6;
+}
+.logo { font-weight: 700; font-size: 1.2rem; }
+.nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Main area with three feature boxes horizontally */
+.container { flex: 1; padding: 2rem; }
+.features {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.feature {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform .25s ease;
+  text-align: center;
+}
+
+/* Hover scale */
+.feature:hover { transform: scale(1.03); }
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+/* Stack feature boxes under 750px */
+@media (max-width: 750px) {
+  .features {
+    flex-direction: column;
+  }
+}
