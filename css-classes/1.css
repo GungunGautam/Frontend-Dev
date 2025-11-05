@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.example {
+  flex: 1 1 200px;
+  margin: 15px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* :hover */
+a:hover {
+  color: white;
+  background: #007bff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* :focus */
+button:focus {
+  outline: 3px solid #28a745;
+}
+
+/* :active */
+.active-demo:active {
+  background-color: #ff6347;
+  color: white;
+}
+
+/* :nth-child */
+li:nth-child(odd) {
+  background-color: #e9ecef;
+}
+li:nth-child(even) {
+  background-color: #dee2e6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #222;
+  color: white;
+}

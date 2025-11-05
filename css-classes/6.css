@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef2f3;
+  margin: 0;
+}
+
+.animation-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  gap: 30px;
+}
+
+/* Moving Box */
+.move {
+  width: 100px;
+  height: 100px;
+  background: #007bff;
+  animation: moveBox 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveBox {
+  from { transform: translateX(-100px); }
+  to { transform: translateX(100px); }
+}
+
+/* Bouncing Circle */
+.circle {
+  width: 80px;
+  height: 80px;
+  background: #28a745;
+  border-radius: 50%;
+  animation: bounce 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100px); }
+}
+
+/* Color-changing text */
+.color-change {
+  animation: colorChange 3s ease-in-out infinite alternate;
+}
+
+@keyframes colorChange {
+  0% { color: #ff6347; }
+  50% { color: #007bff; }
+  100% { color: #28a745; }
+}

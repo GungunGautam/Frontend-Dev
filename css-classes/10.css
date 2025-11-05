@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  text-align: center;
+}
+
+/* Main card layout */
+.ui-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  gap: 15px;
+}
+
+.ui-card img {
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+input, textarea, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Button */
+button {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover and focus */
+button:hover {
+  background: #0056b3;
+}
+input:focus, textarea:focus {
+  outline: 2px solid #28a745;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .ui-card {
+    width: 90%;
+  }
+}

@@ -1,0 +1,61 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  color: #333;
+}
+
+/* Grid Layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Image Card */
+figure {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover effect: scale and darken */
+figure:hover img {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+
+/* Caption */
+figcaption {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  background: #fff;
+}
+
+/* Responsive stacking */
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}

@@ -1,0 +1,73 @@
+/* Element selector */
+p {
+  color: #333;
+}
+
+/* Class selector */
+.highlight {
+  background: #ffeeba;
+}
+
+/* ID selector */
+#special {
+  color: white;
+  background: #007bff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Attribute selector */
+input[type="text"] {
+  border: 2px solid #28a745;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+a[href^="https"] {
+  color: #007bff;
+}
+a[href^="#"] {
+  color: #dc3545;
+}
+
+/* Combinators */
+/* > direct child selector */
+.parent > p {
+  border-left: 4px solid #007bff;
+  padding-left: 10px;
+}
+
+/* + adjacent sibling */
+.sibling1 + .sibling2 {
+  color: #28a745;
+}
+
+/* ~ general sibling */
+.sibling1 ~ .sibling3 {
+  font-style: italic;
+  color: #ff5733;
+}
+
+/* Layout and structure */
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+  background: #fff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 10px;
+}
