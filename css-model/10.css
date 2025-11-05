@@ -1,0 +1,66 @@
+/* q10.css - Navigation Bar with Transitions & Hover Effects */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f8fafc; color: #0f172a; }
+
+/* Navbar */
+.navbar {
+  background: #111827;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links styling */
+.nav-list a {
+  color: #e6edf3;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease; /* smooth hover transitions */
+}
+
+/* Hover */
+.nav-list a:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+}
+
+/* Active link highlight */
+.nav-list a.active {
+  background: #10b981;
+  color: white;
+  box-shadow: 0 6px 14px rgba(16,185,129,0.18);
+}
+
+/* Responsive: stack vertically below 700px */
+@media (max-width: 700px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nav-list a { width: 100%; text-align: center; }
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 14px;
+  background: #111827;
+  color: #e6edf3;
+  margin-top: 40px;
+}
+
+/* Simple hero to show page content */
+.hero { max-width: 900px; margin: 40px auto; padding: 24px; text-align: center; background: white; border-radius: 12px; }

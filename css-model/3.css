@@ -1,0 +1,50 @@
+/* q3.css - Gradient Background Webpage */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fixed header/footer */
+.site-header, .site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  padding: 12px 20px;
+  text-align: center;
+  z-index: 10;
+}
+.site-header { top: 0; }
+.site-footer { bottom: 0; }
+
+/* Main content accounts for fixed header/footer */
+main { margin: 64px 0; }
+
+/* Linear gradient section */
+.linear {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 60%);
+  background-attachment: fixed; /* parallax-like effect */
+}
+
+/* Radial gradient section */
+.radial {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 20% 20%, #f43f5e, #fb923c 50%, #7c3aed 100%);
+}
+
+/* Content styling */
+.content { max-width: 720px; padding: 36px; text-align: center; background: rgba(0,0,0,0.18); border-radius: 10px; }
+.content h2 { margin-bottom: 8px; font-size: 2rem; text-shadow: 0 2px 6px rgba(0,0,0,0.5); }
+.content p { margin: 0; font-size: 1.1rem; }

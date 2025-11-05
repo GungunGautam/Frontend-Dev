@@ -1,0 +1,50 @@
+/* q7.css - Typography & Text Styling */
+* { box-sizing: border-box; }
+body {
+  margin: 36px;
+  font-family: "Georgia", serif;
+  color: #111827;
+  background: #ffffff;
+}
+
+/* Article container for readable measure */
+.container { max-width: 720px; margin: 0 auto; }
+.article h1 {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  line-height: 1.05;
+  letter-spacing: 0.2px;
+  text-align: left;
+}
+
+/* Lead paragraph */
+.lead {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.05rem;
+  color: #374151;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* Paragraphs */
+.article p { font-size: 1rem; line-height: 1.8; letter-spacing: 0.2px; text-align: justify; color: #111827; }
+
+/* Custom element styling */
+mark { background: #fde68a; color: #92400e; padding: 0 4px; border-radius: 3px; }
+strong { color: #0f172a; font-weight: 700; }
+em { color: #334155; font-style: italic; }
+
+/* ::first-letter and ::first-line for emphasis */
+.article p::first-letter {
+  font-size: 1.6rem;
+  font-weight: 700;
+  float: left;
+  line-height: 1;
+  margin-right: 6px;
+}
+.article p::first-line {
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-weight: 600;
+}

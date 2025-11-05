@@ -1,0 +1,47 @@
+/* q6.css - Transformations Showcase */
+* { box-sizing: border-box; }
+body {
+  margin: 24px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f8fafc;
+  color: #111827;
+}
+
+/* Layout */
+.transform-row {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Item and tile shared styles */
+.transform-item { text-align: center; }
+.tile {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(2,6,23,0.06);
+  transition: all 0.4s ease; /* required transition */
+  font-weight: 700;
+}
+
+/* Hover: different transforms */
+/* rotate */
+.rotate .tile:hover { transform: rotate(18deg) scale(1.03); }
+
+/* scale */
+.scale .tile:hover { transform: scale(1.18); }
+
+/* translate */
+.translate .tile:hover { transform: translateY(-18px) translateX(12px); }
+
+/* skew */
+.skew .tile:hover { transform: skewX(12deg) skewY(-6deg); }
+
+/* Labels */
+.transform-item figcaption { margin-top: 8px; font-size: 0.95rem; color: #374151; }

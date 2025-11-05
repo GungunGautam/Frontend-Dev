@@ -1,0 +1,52 @@
+/* q9.css - Outline & Focus Styling Form */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form-wrap { width: 360px; }
+.contact {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(2,6,23,0.08);
+  display: grid;
+  gap: 12px;
+}
+
+/* Inputs styling */
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none; /* prefer custom outlines */
+  transition: box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+/* Outline styles on focus using :focus */
+.contact input:focus, .contact textarea:focus {
+  border-color: #7c3aed;
+  outline: 3px solid rgba(124,58,237,0.12); /* visible outline */
+  outline-offset: 4px; /* demonstrate outline-offset */
+  box-shadow: 0 4px 14px rgba(124,58,237,0.08);
+}
+
+/* small subtle shadows and spacing */
+.contact label { display: block; font-size: 0.95rem; color: #111827; }
+.contact button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.16s ease, background 0.16s ease;
+}
+.contact button:hover { transform: translateY(-3px); background: #4338ca; }

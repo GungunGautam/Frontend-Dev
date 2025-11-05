@@ -1,0 +1,40 @@
+/* q5.css - Advanced CSS Selectors */
+/* Attribute selector: selects text input */
+input[type="text"] {
+  padding: 8px;
+  margin-right: 8px;
+  border-radius: 6px;
+  border: 2px solid #cbd5e1;
+}
+
+/* Attribute selector: starts-with for https links */
+a[href^="https"] {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Pseudo-classes */
+.items li:hover { background: rgba(29,78,216,0.08); } /* :hover */
+.items li:focus { outline: 2px dashed #a78bfa; }      /* :focus (if made focusable) */
+
+/* nth-child: style even items */
+.items li:nth-child(even) { background: rgba(99,102,241,0.06); }
+
+/* Pseudo-elements */
+.items li.after-demo::after {
+  content: " →";
+  font-weight: bold;
+}
+
+/* Combinators examples */
+/* Child combinator: immediate child only */
+main > h1 { margin-bottom: 12px; }
+
+/* Adjacent sibling (+): style li that follows .special */
+.special + li { border-top: 2px dashed #c084fc; }
+
+/* General sibling (~): style all subsequent li after first data-role */
+[data-role="first"] ~ li { font-style: italic; color: #334155; }
+
+/* Descendant selector (space): style anchors inside li */
+.items li a { color: inherit; font-weight: 600; }

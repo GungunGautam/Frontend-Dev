@@ -1,0 +1,48 @@
+/* q8.css - Box Model Exploration */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f8fafc; color: #0f172a; }
+.center { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+
+/* Visual nested boxes for content -> padding -> border -> margin */
+.model { display: grid; gap: 16px; grid-template-columns: 380px 260px; align-items: start; }
+
+/* Outer margin visualization */
+.outer {
+  margin: 18px; /* margin layer */
+}
+
+/* Border layer */
+.bordered {
+  border: 6px solid #60a5fa;
+  padding: 12px; /* padding layer */
+}
+
+/* Inner padding wrapper */
+.padded {
+  background: #93c5fd;
+  padding: 18px; /* content spacing */
+}
+
+/* Content */
+.content {
+  background: #e0f2fe;
+  padding: 12px;
+  text-align: center;
+  outline: 2px dashed rgba(2,6,23,0.06);
+}
+
+/* Explanation text */
+.explain p { margin: 8px 0; font-size: 0.95rem; }
+
+/* box-sizing comparison */
+.box-sizing-demo { grid-column: 1 / -1; display: flex; gap: 12px; margin-top: 12px; }
+.box-normal, .box-border {
+  width: 220px;
+  padding: 16px;
+  border: 6px solid #94a3b8;
+  text-align: center;
+}
+/* Default */
+.box-normal { background: #fff; }
+/* border-box demonstration */
+.box-border { background: #f1f5f9; box-sizing: border-box; }
