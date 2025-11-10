@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      /* Navbar background identical to Bootstrap Docs */
+      .bd-navbar {
+        background-color: #712cf9;
+        background-image: linear-gradient(180deg, #712cf9, #5a1be3);
+      }
+      .navbar {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        color: #fff;
+      }
+      .navbar-brand svg {
+        margin-right: .35rem;
+      }
+      .nav-link {
+        color: rgba(255,255,255,.85);
+        font-weight: 500;
+        margin-right: .75rem;
+      }
+      .nav-link:hover {
+        color: #fff;
+      }
+
+      /* Search box */
+      .bd-search {
+        position: relative;
+      }
+      .bd-search input {
+        background-color: rgba(255,255,255,.15);
+        border: 1px solid rgba(255,255,255,.25);
+        color: #fff;
+        border-radius: .375rem;
+        padding-left: 2rem;
+        padding-right: 3.5rem;
+        height: 2.2rem;
+      }
+      .bd-search input::placeholder {
+        color: rgba(255,255,255,.65);
+      }
+      .bd-search .bi-search {
+        position: absolute;
+        top: 50%;
+        left: .75rem;
+        transform: translateY(-50%);
+        color: rgba(255,255,255,.65);
+      }
+      .kbd-shortcut {
+        position: absolute;
+        right: .5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: .7rem;
+        background-color: rgba(255,255,255,.15);
+        border: 1px solid rgba(255,255,255,.25);
+        color: #fff;
+        padding: 1px 5px;
+        border-radius: .25rem;
+      }
+
+      /* Icons on right */
+      .navbar-icons a {
+        color: white;
+        margin-left: .75rem;
+        font-size: 1.25rem;
+      }
+      .navbar-icons a:hover {
+        color: #e0dff5;
+      }
+
+      .dropdown-toggle {
+        color: white;
+        font-weight: 500;
+      }
+
+      .navbar-dark .navbar-toggler {
+        border-color: rgba(255,255,255,.2);
+      }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Home</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Profile</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Contact</button>
+  </li>
+</ul> -->
+
+
+<!-- <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown
+  </button>
+  <ul class="dropdown-menu">
+    <li><button class="dropdown-item" type="button">Dropdown item</button></li>
+    <li><button class="dropdown-item" type="button">Dropdown item</button></li>
+    <li><button class="dropdown-item" type="button">Dropdown item </button></li>
+  </ul> -->
+
+<!-- <nav class="navbar navbar-expand-lg bg-body-blue bg-primary ">
+  <div class="container-fluid bs-primary">
+    <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
+  <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"/>
+  <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"/>
+</svg></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Docs </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Examples </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active" aria-current="page" href="#">Icons </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Themes </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Blog </a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+  <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+</svg>
+          </a>
+        </li>
+    </div>
+  </div>
+</nav> -->
+
+    <img src="bsp.png" alt="">
+<nav class="navbar navbar-expand-lg navbar-dark bd-navbar px-3">
+      <a class="navbar-brand me-3" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bootstrap" viewBox="0 0 16 16">
+          <path d="M5.062 12.5H8.5c2.337 0 3.55-1.1 3.55-2.727 0-1.162-.803-2.056-1.978-2.227v-.058c.878-.215 1.558-.933 1.558-2.002 0-1.393-1.066-2.486-3.04-2.486H5.062v9.5Zm1.556-8.22h1.6c1.003 0 1.615.55 1.615 1.395 0 .876-.662 1.387-1.776 1.387h-1.44V4.28Zm0 3.636h1.722c1.27 0 1.957.55 1.957 1.458 0 .93-.7 1.47-1.973 1.47h-1.706V7.916Z"/>
+          <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4Z"/>
+        </svg>
+        Docs
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="bdNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Examples</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Icons</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        </ul>
+
+        <form class="d-flex bd-search me-3" role="search">
+          <i class="bi bi-search"></i>
+          <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
+          <span class="kbd-shortcut">Ctrl K</span>
+        </form>
+
+        <div class="d-flex align-items-center navbar-icons">
+          <a href="#"><i class="bi bi-github"></i></a>
+          <a href="#"><i class="bi bi-x-lg"></i></a>
+          <a href="#"><i class="bi bi-arrow-repeat"></i></a>
+
+          <div class="dropdown">
+            <a class="dropdown-toggle nav-link p-0 ms-2" href="#" id="versionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">v5.3</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="versionDropdown">
+              <li><a class="dropdown-item" href="#">v5.3</a></li>
+              <li><a class="dropdown-item" href="#">v5.2</a></li>
+            </ul>
+          </div>
+
+          <a href="#"><i class="bi bi-sun ms-2"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.js"></script>
+</div>
+</div>
+</body>
+</html>

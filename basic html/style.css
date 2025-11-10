@@ -1,0 +1,53 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+    }
+
+    .parent {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 200px);
+      grid-template-rows: repeat(2, 200px);
+      gap: 15px;
+      transition: all 0.5s ease;
+    }
+
+    .box1, .box2, .box3, .box4 {
+      background-color: lightblue;
+      border-radius: 15px;
+      transition: transform 1.5s ease, background-color 0.8s ease, border-radius 0.8s ease;
+    }
+
+    /* Hover on parent moves all boxes */
+    .parent:hover .box1 {
+      transform: translate(-300px, -300px);
+      background-color: orange;
+      border-radius: 40px;
+    }
+
+    .parent:hover .box2 {
+      transform: translate(300px, -300px);
+      background-color: orange;
+      border-radius: 40px;
+    }
+
+    .parent:hover .box3 {
+      transform: translate(-300px, 300px);
+      background-color: orange;
+      border-radius: 40px;
+    }
+
+    .parent:hover .box4 {
+      transform: translate(300px, 300px);
+      background-color: orange;
+      border-radius: 40px;
+    }

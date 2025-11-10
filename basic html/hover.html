@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip Hover</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: white;
+        }
+
+        .parent {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+        }
+
+        .box1 {
+          height: 100px;
+          width: 250px;
+          border: 2px solid black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: red;
+          position: absolute;
+          bottom: 120%;
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .box {
+          height: 100px;
+          width: 200px;
+          border: 2px solid black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        .parent:hover .box1 {
+          visibility: visible;
+          opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box1">This is a tooltip text</div>
+        <div class="box">Hover Over Me</div>
+    </div>
+</body>
+</html>
