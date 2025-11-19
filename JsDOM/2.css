@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; padding: 20px; }
+textarea { width: 100%; max-width:600px; }
+.status { margin-top:8px; font-weight:600; }
+.warning { background: yellow; padding:2px 6px; border-radius:4px; }
+.danger { background: tomato; color:white; padding:2px 6px; border-radius:4px; }

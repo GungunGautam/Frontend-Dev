@@ -1,0 +1,23 @@
+/* base styles */
+body { font-family: Arial, Helvetica, sans-serif; transition: background-color .25s, color .25s; padding: 20px; }
+
+/* light theme */
+body[data-theme="light"] {
+  background: #ffffff;
+  color: #222;
+}
+
+/* dark theme */
+body[data-theme="dark"] {
+  background: #1f1f1f;
+  color: #eee;
+}
+
+/* blue theme */
+body[data-theme="blue"] {
+  background: linear-gradient(180deg,#e6f0ff,#d2e6ff);
+  color: #053463;
+}
+
+/* simple button style */
+.theme-btn { margin-right:8px; padding:6px 10px; }

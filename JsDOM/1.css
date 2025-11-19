@@ -1,0 +1,7 @@
+body { font-family: Arial, Helvetica, sans-serif; padding: 20px; }
+.controls { margin-bottom: 10px; }
+.product-list { list-style: none; padding: 0; max-width: 480px; }
+.product-item { display:flex; justify-content:space-between; align-items:center; padding:8px; border:1px solid #ddd; margin-bottom:6px; border-radius:6px; }
+.product-name { flex:1; padding-right:10px; }
+.btn { margin-left:6px; }
+.editing { background: #fff9e6; }

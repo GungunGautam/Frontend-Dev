@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Q5 - Image Gallery Modal (fixed)</title>
+  <link rel="stylesheet" href="q5.css" />
+</head>
+<body>
+  <main>
+    <h1>Image Gallery</h1>
+    <div id="gallery" class="gallery-grid">
+      <!-- Thumbnails use seeded picsum URLs and store a reliable large image in data-large -->
+      <img src="https://picsum.photos/seed/pic1/200/130" data-large="https://picsum.photos/seed/pic1/1200/800" alt="img1" class="thumb" />
+      <img src="https://picsum.photos/seed/pic2/200/130" data-large="https://picsum.photos/seed/pic2/1200/800" alt="img2" class="thumb" />
+      <img src="https://picsum.photos/seed/pic3/200/130" data-large="https://picsum.photos/seed/pic3/1200/800" alt="img3" class="thumb" />
+      <img src="https://picsum.photos/seed/pic4/200/130" data-large="https://picsum.photos/seed/pic4/1200/800" alt="img4" class="thumb" />
+      <img src="https://picsum.photos/seed/pic5/200/130" data-large="https://picsum.photos/seed/pic5/1200/800" alt="img5" class="thumb" />
+      <img src="https://picsum.photos/seed/pic6/200/130" data-large="https://picsum.photos/seed/pic6/1200/800" alt="img6" class="thumb" />
+    </div>
+  </main>
+
+  <!-- modal structure -->
+  <div id="modalOverlay" class="modal-overlay" hidden>
+    <div id="modalContent" class="modal-content" role="dialog" aria-modal="true">
+      <img id="modalImage" src="" alt="preview" />
+    </div>
+  </div>
+
+  <script src="5.js"></script>
+</body>
+</html>

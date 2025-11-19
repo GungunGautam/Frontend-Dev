@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; padding:20px; }
+.step { max-width: 480px; padding:10px; border:1px solid #eee; margin-bottom:8px; border-radius:6px; }
+.nav { margin-top:8px; }
+button { margin-right:6px; }
