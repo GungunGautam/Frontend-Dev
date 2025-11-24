@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .post { padding: 15px; margin: 10px; background: #f9f9f9; border-left: 3px solid blue; }
+        .tag { display: inline-block; padding: 3px 8px; background: orange; color: white; margin: 5px; }
+        .highlight { background: yellow; }
+    </style>
+</head>
+<body>
+    <button id="addPost">Add New Post</button>
+    <button id="prependPost">Prepend Featured Post</button>
+    <button id="removePost">Remove Last Post</button>
+    <button id="highlightKeyword">Highlight "jQuery" Posts</button>
+    
+    <div id="posts">
+        <div class="post">First Blog Post about Web Development</div>
+        <div class="post">Second Post about jQuery Tips</div>
+        <div class="post">Third Post about JavaScript</div>
+    </div>
+
+    <script src="8.js"></script>
+</body>
+</html>

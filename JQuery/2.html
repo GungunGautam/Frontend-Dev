@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .product { padding: 10px; margin: 10px; border: 1px solid #ccc; }
+        .highlighted { background: yellow; }
+        .selected { border: 2px solid red; }
+        .details { display: none; }
+        .product[data-discount="true"] { background: lightblue; }
+    </style>
+</head>
+<body>
+    <div class="product" data-stock="in">
+        <h3>Product 1</h3>
+        <div class="details">Details: High quality product</div>
+        <span class="favorite">♡</span>
+    </div>
+    <div class="product" data-discount="true" data-stock="out">
+        <h3>Product 2 (Discount)</h3>
+        <div class="details">Details: Limited time offer</div>
+        <span class="favorite">♡</span>
+    </div>
+    <script src="2.js"></script>
+   
+</body>
+</html>

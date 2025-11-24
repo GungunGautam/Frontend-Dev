@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        var jq1 = jQuery.noConflict(true);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .carousel { padding: 20px; background: lightblue; margin: 10px; }
+        .modal { display: none; padding: 20px; background: white; border: 2px solid black; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; }
+        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999; }
+        .widget { padding: 15px; background: lightgreen; margin: 10px; cursor: pointer; }
+        .active { border: 3px solid red; }
+        .tooltip { display: none; position: absolute; background: black; color: white; padding: 5px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <button id="startCarousel">Start Carousel (v1)</button>
+    <button id="showModal">Show Modal (v2)</button>
+    <button id="closeModal">Close Modal</button>
+    
+    <div class="carousel">Carousel Slide 1</div>
+    
+    <div class="overlay"></div>
+    <div class="modal">This is a notification modal!</div>
+    
+    <div class="widget">Widget 1</div>
+    <div class="widget">Widget 2</div>
+    <div class="widget" data-tooltip="This is Widget 3">Widget 3</div>
+    
+    <div class="tooltip"></div>
+
+    <script src="9.js"> </script>
+</body>
+</html>
