@@ -1,0 +1,46 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Rahul Sharma",
+      "section": "A",
+      "marks": 95,
+      "grade": "A"
+    },
+    {
+      "id": "2",
+      "name": "Priya Patel",
+      "section": "B",
+      "marks": 87,
+      "grade": "B"
+    },
+    {
+      "id": "3",
+      "name": "Amit Kumar",
+      "section": "A",
+      "marks": 76,
+      "grade": "C"
+    },
+    {
+      "id": "4",
+      "name": "Sneha Gupta",
+      "section": "C",
+      "marks": 92,
+      "grade": "A"
+    },
+    {
+      "id": "5",
+      "name": "Arjun Singh",
+      "section": "B",
+      "marks": 68,
+      "grade": "D"
+    },
+    {
+      "id": "e3ba",
+      "name": "Gungun Gautam",
+      "section": "D",
+      "marks": 98,
+      "grade": "A"
+    }
+  ]
+}
